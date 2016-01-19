@@ -13,6 +13,7 @@ run apt-get install -y cmake
 run apt-get install -y build-essential
 run apt-get install -y tcpdump
 run apt-get install -y screen
+run apt-get install -y wget 
 
 # Install go
 run curl https://go.googlecode.com/files/go1.2.1.linux-amd64.tar.gz | tar -C /usr/local -zx
@@ -38,7 +39,6 @@ run mkdir /var/shared/
 run touch /var/shared/placeholder
 run chown -R dev:dev /var/shared
 volume /var/shared
-
 workdir /home/dev
 env HOME /home/dev
 add vimrc /home/dev/.vimrc
